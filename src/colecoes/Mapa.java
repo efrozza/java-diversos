@@ -29,6 +29,7 @@ public class Mapa {
 		// busca por um valor de chave
 		System.out.println(usuarios.containsValue("Joana"));
 
+		// obtem item pela chave
 		System.out.println(usuarios.get(20));
 
 		// lista todas as chaves do map
@@ -40,12 +41,14 @@ public class Mapa {
 		for (String valor: usuarios.values()) {
 			System.out.println(valor);
 		}
-		
+
+		// lista chave e valor do map
 		for (Entry<Integer, String> registro: usuarios.entrySet()){
 			System.out.println("chave " + registro.getKey());
 			System.out.println("valor " + registro.getValue());
 		}
-		
+
+		// remove item pela chave
 		usuarios.remove(1);
 
 		for (Entry<Integer, String> registro: usuarios.entrySet()){

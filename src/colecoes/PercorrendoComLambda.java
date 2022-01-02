@@ -18,19 +18,15 @@ public class PercorrendoComLambda {
 		aulas.add("aula 4");
 		
 
-
-		aulas.forEach(aula -> System.out.println(aula));
+    	aulas.forEach(aula -> System.out.println(aula));
 		
 		System.out.println("quantidade de aulas" + aulas.size());
-
 		
-		//ordenando		
+		//ordenando nao leva em conta acentos
 		Collections.sort(aulas);
 
 		for (String aula : aulas) {
-
 			System.out.println(aula);
-
 		}
 	}
 

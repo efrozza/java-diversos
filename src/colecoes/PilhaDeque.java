@@ -3,7 +3,7 @@ package colecoes;
 import java.util.ArrayDeque;
 import java.util.Deque;
 
-public class Pilha {
+public class PilhaDeque {
 
     public static void main(String[] args) {
         //LIFO

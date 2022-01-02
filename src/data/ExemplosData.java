@@ -1,6 +1,8 @@
 package data;
 
 import java.time.*;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeFormatterBuilder;
 import java.time.temporal.ChronoUnit;
 
 public class ExemplosData {
@@ -13,10 +15,23 @@ public class ExemplosData {
 		// a partir do JAVA 8 LocalDate é mais usado
 		LocalDate dataHoje = LocalDate.now();
 		System.out.println("Data atual: " + dataHoje);
-		
+
+		String DDMMAAAA = "dd-MM-yyyy";
+		final String DDMES_LITERALAAAA = "dd-MMM-yyyy";
+
+        DateTimeFormatter dTF =
+                new DateTimeFormatterBuilder().parseCaseInsensitive()
+                        .appendPattern(DDMES_LITERALAAAA)
+                        .toFormatter();
+
+        System.out.println("Data formatada");
+        System.out.println(dTF.format(dataHoje));
+
 		//hora atual
 		LocalTime horaAgora = LocalTime.now();		
 		System.out.println("Hora atual " + horaAgora);
+
+        System.out.println("Hora atual + 1 " + horaAgora.plusHours(1));
 		
 		//hora truncada				
 		LocalTime horaMinuto = LocalTime.now().truncatedTo(ChronoUnit.MINUTES);

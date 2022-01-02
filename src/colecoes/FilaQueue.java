@@ -3,9 +3,10 @@ package colecoes;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class Fila {
+public class FilaQueue {
 
     public static void main(String[] args) {
+
         Queue<String> fila = new LinkedList<>();
 
         // add e offer adicionam a diferença é ficha cheia
@@ -19,9 +20,14 @@ public class Fila {
         // obter elemento
 
         // peek retorna o proximo elemento da fila sem remove-lo
-        // element tbm a diferença é no tratamento de fila vazia
+        // então retornara sempre o primeiro elemento
         System.out.println(fila.peek());
+        // element tbm nao remove a diferença é no tratamento de fila vazia
+        // o element lanca exceção se a lista estiver vazia
         System.out.println(fila.element());
+
+        // limpar a fila
+        //fila.clear();
         System.out.println(fila.isEmpty());
 
         // retorna elemento removendo da fila
