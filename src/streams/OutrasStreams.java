@@ -25,7 +25,7 @@ public class OutrasStreams {
         System.out.println("\n TakeWhile...");
         alunos.stream()
                 .distinct()
-                .takeWhile(a -> a.nota >= 7)
+                //.takeWhile(a -> a.nota >= 7)
                 .forEach(System.out::println);
 
 
